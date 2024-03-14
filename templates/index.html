@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product list</title>
+</head>
+ 
+<body>
+    <h1>Product form</h1>
+ 
+    <form action="saveData" method="POST">
+        <pre>
+            Name : <input type="text"
+                                      name="name"> <br>  
+            Category : <input type="text"
+                                      name="category"> <br>                     
+            Brand : <input type="text"
+                                      name="brand"> <br>
+            Quantity : <input type="text"
+                                      name="qty"> <br>
+            Price : <input type="text"
+                                      name="price"> <br>
+            <input type="submit" value="Submit Form">
+        </pre>
+    </form>
+
+    <table>
+      <tr>
+      <th> Name </th>
+      <th> Category </th>
+      <th> Brand </th>
+      <th> Quantity </th>
+      <th> Price </th>
+      </tr>
+      {% if products|length>0 %}
+      {% for item in products %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.qty }}</td>
+            <td>{{ item.price }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+
+      </table>
+  
+</body>
+</html>
