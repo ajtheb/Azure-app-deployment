@@ -1,17 +1,17 @@
-"""Initial migration.
+"""empty message
 
-Revision ID: 2594a0a6c6cc
-Revises: d0c7b8e4b57c
-Create Date: 2024-03-15 07:53:29.150179
+Revision ID: 9e96c892253c
+Revises: 
+Create Date: 2024-03-15 08:31:15.569467
 
 """
 from alembic import op
 import sqlalchemy as sa
-from sqlalchemy.dialects import postgresql
+
 
 # revision identifiers, used by Alembic.
-revision = '2594a0a6c6cc'
-down_revision = 'd0c7b8e4b57c'
+revision = '9e96c892253c'
+down_revision = None
 branch_labels = None
 depends_on = None
 
